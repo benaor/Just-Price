@@ -36,6 +36,7 @@ function verifier(nombre){
 
         instruction.textContent = "#" + coups + " ( " + nombre + " ) c'est le juste prix !";
         instruction.className = 'instruction fini';
+        input.disabled = true;
 
     }
 
