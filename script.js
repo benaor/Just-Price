@@ -15,6 +15,34 @@ let coups = 0;
 let nombreChoisi;
 console.log(aleatoire);
 
+//function verifier 
+function verifier(nombre){
+
+    let instruction = document.createElement('div');
+
+    if(nombre < aleatoire){
+
+        // C'est plus
+        instruction.textContent = "#" + coups + " ( " + nombre + " ) c'est plus !";
+        instruction.className = 'instruction plus';
+
+    } else if (nombre > aleatoire){
+
+        // C'est moins
+        instruction.textContent = "#" + coups + " ( " + nombre + " ) c'est moins !";
+        instruction.className = 'instruction moins';
+
+    } else {
+
+        instruction.textContent = "#" + coups + " ( " + nombre + " ) c'est le juste prix !";
+        instruction.className = 'instruction fini';
+
+    }
+
+    document.querySelector('#instructions').prepend(instruction);
+
+}
+
 // Etape 4 - Vérifier que l'utilisateur donne bien un nombre
 input.addEventListener('keyup', () => {
 
