@@ -52,3 +52,4 @@ formulaire.addEventListener('submit', (e) => {
     }
 })
 
+// Etape 6 - Créer la fonction vérifier
